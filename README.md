@@ -192,7 +192,7 @@ mremi_contact:
     contact_class:         Mremi\ContactBundle\Model\Contact
 
     form:
-        type:              mremi_contact
+         type:             Mremi\ContactBundle\Form\Type\ContactType
         name:              contact_form
         validation_groups: [Default]
         subject_provider:  mremi_contact.subject_provider.noop
