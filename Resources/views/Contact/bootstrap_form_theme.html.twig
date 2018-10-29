@@ -39,7 +39,7 @@ file that was distributed with this source code.
 
 {% block form_label %}
 {% spaceless %}
-    {% set label_attr = label_attr|merge({'class': label_attr.class|default('') ~ ' col-lg-2 control-label' }) %}
+    {% set label_attr = label_attr|merge({'class': label_attr.class|default('') ~ ' control-label' }) %}
 
     {% if not compound %}
         {% set label_attr = label_attr|merge({'for': id}) %}
@@ -65,7 +65,7 @@ file that was distributed with this source code.
     <div class="form-group{% if errors|length > 0 %} has-error{% endif %}">
         {{ form_label(form, label|default(null)) }}
 
-        <div class="col-lg-3">
+        <div class="col-lg-12">
             {% set attr = attr|merge({'class': attr.class|default('') ~ ' form-control'}) %}
 
             {{ form_widget(form, {'attr': attr}) }}
